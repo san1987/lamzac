@@ -1,22 +1,60 @@
-html, body {height: 100%; padding: 0px; margin: 0px;font-family: "Verdana"; font-size: 10pt;}
+html, body {	height: 100%; padding: 0px; margin: 0px;font-family: "Verdana"; font-size: 24px;
 
 
+}
 
-#content{	width: 1350px;
+.clear{	clear: both;}
+
+.upper{	text-transform: uppercase;}
+
+
+.content{	width: 1350px;
 	margin: 0 auto;
 }
 
-#content > div{
+.content > div{
 	clear: both;
+}
+
+.menu{
+	position: fixed;
+	width: 100%;
+	height: 70px;
+	background: rgba(255,255,255,0.5);
+	z-index: 999;
+}
+
+.menu .subcontent{	text-align: left;}
+
+.menu img{	float: left;
+	display: block;
+}
+
+.menu ul{
+	float: left;}
+
+.menu li{
+	font-size: 20px;
+
+}
+
+li {
+	float: left;
+	display: block;
 }
 
 
 h2{
 	color: rgb(0,122,195);
-	margin-top: 20px;
+	font-size: 40px;
 }
 
 div {	text-align: center;}
+
+ul{
+	list-style: none;
+}
+
 
 
 
@@ -32,8 +70,7 @@ div {	text-align: center;}
 
 #catalog ul{	list-style: none;}
 
-#catalog li{	float: left;
-	display: block;
+#catalog li{
 	width: 350px;
 	height: 510px;
 	margin: 10px;
@@ -109,58 +146,38 @@ div {	text-align: center;}
 }
 
 
-#catalog ul{
-	list-style: none;
-}
 
 
 #rest{     background: rgb(240,240,240);
-	 height: 700px;
 	 clear:both;}
 
-#rest ul {
 
+ul {	height: auto;}
 
-}
-
-
-#rest ul li{
+ul.absolute_text  li{
 	position: relative;	float: left;
 	display: block;
 	margin: 15px;
 	width: 544px;
-	height: 185px;
-
-
-
-
 }
 
-#rest ul li img{
-	position: absolute;
+ul.absolute_text  li img{
+	//position: absolute;
 	left: 0px;
 	top: 0px;
 }
 
 
-#rest ul li div{
+ul.absolute_text li div{
 	position: absolute;
-	left: 0px;
-	bottom: 0px;
 	text-transform: uppercase;
 	font-size: 22px;
 	color: rgb(222,195,64);
-	width: 504px;
-	margin: 20px;
 	text-align: left;
 	font-weight: bold;
 }
 
-#rest ul li div span{	color: white;}
-
-#rest ul li.text_right div{
-	text-align: right;
-}
+#rest ul.absolute_text li div span{	color: white;}
 
 
 
@@ -168,14 +185,71 @@ div {	text-align: center;}
 	margin-left: 250px;
 }
 
-#rest ul li.last div{
-	text-align: center;
-	display: block;
-	vertical-align: center;
-	height: 105px;
-}
-
 
 
 #about img{	display: block;
 	margin: 0 auto;}
+
+
+#instruction {	height: 900px;
+}
+
+
+#delivery > img {	float: left;
+
+}
+
+#delivery ul{
+	float: left;
+	width: 600px;
+	display: table;
+}
+
+
+
+#delivery li{
+	padding-left: 70px;
+	padding-top: 20px;    background: url("imgs/del1.jpg") no-repeat left center ;
+    color: white;
+    font-size: 20px;
+    min-height: 55px;
+    width: 100%;
+    text-align: left;
+}
+
+
+
+
+#delivery li.li2{
+    background-image: url("imgs/del2.jpg");
+}
+
+#delivery li.li3{
+    background-image: url("imgs/del3.jpg");
+}
+
+
+
+.line{	border-top: solid 2px black;
+	height: 0px;}
+.blue{	border-color: rgb(140,181,221);}
+
+span.red{	color: red;}
+
+.button{
+	padding:25px;
+	display: block;
+	margin: 0 auto;
+	clear: both;}
+
+.button.red{	background: red;
+	color: white;}
+
+.button.red_out{
+	border: solid 1px red;
+	color: red;
+}
+
+
+.phone{	background: url("imgs/phone.png") no-repeat left center;
+	padding-left:20px;}
