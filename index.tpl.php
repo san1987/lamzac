@@ -15,46 +15,51 @@
 <body>
 
 
-<div class=menu>
+<?
+include "form.tpl.php";
+?>
+
+
+<div class=menu >
 	<div class=content>
 		<div class=subcontent>
-			<img src='imgs/logo.png'>.
+			<img src='imgs/logo.png'>
 			<ul>
-		  		<li>Главная</li>
-		  		<li>Каталог</li>
-		  		<li>Инструкция</li>
+		  		<li class='sel' anchor=#header><a href='#header'>Главная</a></li>
+		  		<li  anchor=#catalog><a href='#catalog'>Каталог</a></li>
+		  		<li  anchor=#instruction><a href='#instruction'>Инструкция</a></li>
 			</ul>
-			<div class=phone>
-				8 495 123 45 67
+			<div style='padding-top: 20px;'>
+				<span class=phone>				8 495 123 45 67</span>
 			</div>
 		</div>
 	</div>
 </div>
 
-<div class=content>
-	<div id='header'>
+<div class=content >
+	<div id='header' name=header>
 		<img src='imgs/header.jpg'>
 
 	</div>
 
-	<div id='catalog'>
+	<div id='catalog' name=catalog>
 		<h2>Выбери цвет своего УДОВОЛЬСТВИЯ</h2>
 		<ul class=subcontent>
 
 		<?
 		for ($i=1;$i<=6; $i++){
 		?>
-			<li class='free_delivery sale'>
+			<li class='<?=rand(1,4)==2?"free_delivery ":""?><?=rand(1,4)==2?"  sale":""?>'>
 				<div class=pictures>
 					<img class=picture src='imgs/catalog1.jpg'>
-					<img class=free_delivery src='imgs/free_delivery.png'>
-					<img class=sale src='imgs/sale.png'>
+					<img class=free_delivery src='imgs/free_delivery.jpg'>
+					<img class=sale src='imgs/sale.jpg'>
 				</div>
 				Lamzac для отдыха ОРАНЖЕВЫЙ<br>
 				<span class='price1'>5 700 руб.</span>
 				<span class='price2'><b>3 490</b> руб.</span><br>
 				<span class='stock'>В наличии</span>  <br>
-				<div class='order'>Заказать</div>
+				<a href='javascript: show_req(<?=$i?>)' class='order'>Заказать</a>
 			</li>
 
 		<?
@@ -128,7 +133,7 @@
 </div>
 <div class=content>
 
-	<div id='instruction'>
+	<div id='instruction' name=instruction>
 		<h2>Как это работает:</h2>
 
 
@@ -177,7 +182,11 @@
 
 <div style='background: rgb(30,30,30)'>
 	<div class=content>
-		тест
+		<div class=subcontent>
+		<?
+		include "slider.tpl.php";
+		?>
+		</div>
 	</div>
 </div>
 	<div class=content>
@@ -187,17 +196,71 @@
 
 		Закажи сейчас и <span class='red upper'>получи</span>
 		приятный <span class='red upper'>подарок</span> к заказу<br>
-		<div class='button red upper'>хочу LAMZAC и подарок</div>
+
+		<div class=clear></div>
+		<a href='javascript: show_req(-1)' class='button red upper'>хочу LAMZAC и подарок</a>
+		<div class=clear></div>
+
 		Узнай больше по <span class=phone>8 495 123 45 67</span><br>
-		<div class='button red_out upper'>перезвоните мне</div>
+		или оставь свой номер, мы тебе <span class='red upper'>перезвоним</span> сами
+
+		<div class=clear></div>
+		<a href='javascript: show_req(-1)' class='button red_out upper'>перезвоните мне</a>
+        <div class=clear style='height: 20px'></div>
 
 	</div>
+</div>
 
-	<div id='footer'>
+
+<div style='position: relative'>
+	<div class=content>
+		<div id='footer' style='position: relative'>
+			<img src='imgs/footer.jpg'>
+
+			<div style='position: absolute; left: 0; top: 0; width:100%'>
+				<div class='subcontent'>
+					<img src='imgs/logo.png'>
+					<br><br>
+					Получай от жизни удовольствие    <br><br>
+					<div style='text-align: right'>
+					     <span class='phone'>8 495 123 45 67<span>
+					</div>
+				</div>
+			</div>
+        </div>
 	</div>
+	<div style='background: rgba(0,0,0,0.5); position: absolute; left: 0; top: 0; width: 100% ; height: 100%;'  >
+	</div>
+
+
 
 
 </div>
+
+<div class=clear></div>
+
+
+
+<script type="text/javascript">
+	$(document).ready(function() {
+	   $('a[href^="#"]').click(function () {
+	     elementClick = $(this).attr("href");
+
+	     $(".menu li").removeClass("sel");
+	     $(".menu li[anchor="+elementClick+"]").addClass("sel");
+
+	     destination = $(elementClick).offset().top -100;
+	     if($.browser.safari){
+	       $('body').animate( { scrollTop: destination }, 1100 );
+	     }else{
+	       $('html').animate( { scrollTop: destination }, 1100 );
+	     }
+	     return false;
+	   });
+	 });
+</script>
+
+
 
 
 </body>

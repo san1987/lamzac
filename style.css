@@ -3,6 +3,8 @@ html, body {	height: 100%; padding: 0px; margin: 0px;font-family: "Verdana"; fo
 
 }
 
+a{	text-decoration: none;}
+
 .clear{	clear: both;}
 
 .upper{	text-transform: uppercase;}
@@ -20,9 +22,11 @@ html, body {	height: 100%; padding: 0px; margin: 0px;font-family: "Verdana"; fo
 	position: fixed;
 	width: 100%;
 	height: 70px;
-	background: rgba(255,255,255,0.5);
+	background: rgba(255,255,255,0.9);
 	z-index: 999;
 }
+
+.menu a{    color: black;}
 
 .menu .subcontent{	text-align: left;}
 
@@ -35,7 +39,24 @@ html, body {	height: 100%; padding: 0px; margin: 0px;font-family: "Verdana"; fo
 
 .menu li{
 	font-size: 20px;
+    margin-left: 50px;
+    font-weight: bold;
 
+}
+
+
+.menu li:hover{	cursor: hand;
+	cursor: pointer;
+}
+
+.menu li:hover, .menu li.sel{	border-bottom: solid 3px black;}
+
+.menu li.sel{
+	border-bottom-color: rgb(0,122,195);}
+
+.menu li.sel a{
+	color: rgb(0,122,195);
+	border-bottom-color: rgb(0,122,195);
 }
 
 li {
@@ -90,7 +111,8 @@ ul{
 }
 
 
-#catalog li .picture{
+#catalog li .picture{    width:100%;
+    border-bottom: solid 1px lightgray;
     left: 0xp;
 	top: 0px;}
 
@@ -99,20 +121,23 @@ ul{
 	left: 0xp;
 	top: 0px;
 	display: none;
+	visibility: hidden;
 
 }
 
 #catalog li .sale{
-	top: 0px;
-	right: 0px;
+	top: 10px;
+	right: 10px;
 	display: none;
+	visibility: hidden;
 }
 
 #catalog li.free_delivery .free_delivery{
-	display: block;}
+	visibility: visible;
+}
 
 #catalog li.sale .sale{
-	display: block;
+	visibility: visible;
 }
 
 
@@ -132,6 +157,7 @@ ul{
 	text-transform: uppercase;
 	font-size: 20px;
 	margin: 0 auto;
+	display: block;
 }
 
 
@@ -209,10 +235,10 @@ ul.absolute_text li div{
 
 #delivery li{
 	padding-left: 70px;
-	padding-top: 20px;    background: url("imgs/del1.jpg") no-repeat left center ;
+	padding-top: 10px;    background: url("imgs/del1.jpg") no-repeat left center ;
     color: white;
     font-size: 20px;
-    min-height: 55px;
+    min-height: 50px;
     width: 100%;
     text-align: left;
 }
@@ -237,19 +263,106 @@ ul.absolute_text li div{
 span.red{	color: red;}
 
 .button{
-	padding:25px;
-	display: block;
+	padding:20px;
+	display: inline-block;
 	margin: 0 auto;
-	clear: both;}
+	clear: both;
+	font-weight: bold;}
 
 .button.red{	background: red;
 	color: white;}
 
 .button.red_out{
-	border: solid 1px red;
+	border: solid 3px red;
 	color: red;
 }
 
 
 .phone{	background: url("imgs/phone.png") no-repeat left center;
-	padding-left:20px;}
+	padding-left: 30px;
+	color: rgb(0,122,195);
+}
+
+
+#contacts{	line-height: 2;}
+
+#footer{	font-size:40px;
+	color: white;}
+#footer span{
+	font-size:30px;
+}
+#footer img{	display: block;
+	margin-top: 20px;}
+
+
+
+
+
+	#send_req_id{
+		font-size: 15px;
+		font-weight: none;
+   	     display: none; width: 100%;
+   	     height:100%; z-index:998;margin: 0 0;
+   	      position: fixed;
+		 background: rgba(0,0,0,0.5)
+   }
+
+   #send_req_id1{
+   		 width: 100%; z-index:999;margin: 100px auto; position: fixed;
+   }
+
+   #send_req  {
+   		 width: 600px; border: solid 1px gray; background: rgb(247, 247, 247);  padding: 10px
+   }
+
+    #send_req input[type=text],  #send_req textarea{    	width: 400px;    }
+
+   #send_req input[type=submit]{
+   		 padding: 10px; text-transform: uppercase; background-color: rgb(61,122,190); color: white;
+
+
+   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                      div#rotator  { position: relative;}
+     				  div#rotator ul {padding-left: 50px; margin: auto 0; cursor: hand; cursor: pointer; }
+					  div#rotator ul li {float:left; position:absolute; list-style: none; padding: 0; margin-left: 0px }
+
+			          #aNextButton:hover { background-position: -53px -center;  }
+					  #aPrevButton:hover { background-position: -195px -center; }
+
+					  #aPrevButton {display: block; float:left ;   width:54px; height: 100%; border: solid 0px black;  background: url("imgs/g-pbox2.png")  left center no-repeat;   }
+					  #aPrevButton:hover{
+					  	//background-color: gray;opacity: 0.5;
+					  }
+					  #aNextButton {display: block;  float:right ;   width:54px; height: 100%; border: solid 0px black;  background: url("imgs/g-pbox2.png")  -130px center no-repeat;    }
+					  #aNextButton:hover{
+					  	//background-color: gray;opacity: 0.5;
+					   }
+
+					   div#rotator .anons {					   		position: absolute;
+					   		top: 450px;
+						   	left: 185px;
+					   }
+
+					   div#rotator .anons a{					   		display: block;
+					   		float:left;
+					   		border: solid 3px rgb(30,30,30);
+					   		margin-left: 10px;
+					   }
+
+					   div#rotator .anons a.sel{					   		border-color: rgb(255,201,30);					   }
+					   div#rotator .anons img{					   		width:250px;					   }
