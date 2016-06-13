@@ -3,6 +3,13 @@
 $width=1050;
 $height=500;
 
+$pics=array("imgs/slid_1.png",
+			"imgs/slid_2.png",
+			"imgs/slid_3.png",
+			"imgs/slid_4.png",
+			"imgs/slid_5.png"
+			);
+
 
 ?>
 
@@ -36,6 +43,7 @@ function theRotator() {
 
 	// Вызываем функцию rotate для запуска слайдшоу, 5000 = смена картинок происходит раз в 5 секунд
 	setInterval('counter()',1000);
+	rotate();
 }
 
 var page_id=0;
@@ -44,6 +52,11 @@ var is_rotate=1;
 
 
 function show_next_prev(is_next, is_btn, page_needed) {
+
+	if (page_needed==-1) page_needed=<?=count($pics)?>-1;
+	if (page_needed==<?=count($pics)?>) page_needed=0;
+
+
 	if (is_btn){
 		allow=false;
 		count_time=0;
@@ -62,7 +75,7 @@ function show_next_prev(is_next, is_btn, page_needed) {
 
 	}
 
-	if (page_needed!=-1)  next=$(sss='div#rotator ul li[page_id='+page_needed+']');
+	if (page_needed!=-999)  next=$(sss='div#rotator ul li[page_id='+page_needed+']');
 
 
 	// Расскомментируйте, чтобы показвать картинки в случайном порядке
@@ -79,7 +92,12 @@ function show_next_prev(is_next, is_btn, page_needed) {
 	page_id=next.attr("page_id");
 
 	$("div#rotator .anons a").removeClass("sel");
+	$("div#rotator .anons a").removeClass("show");
 	$("div#rotator .anons a[page_id="+page_id+"]").addClass("sel");
+
+	$("div#rotator .anons a[page_id="+(page_id-1)+"]").addClass("show");
+	$("div#rotator .anons a[page_id="+(page_id)+"]").addClass("show");
+	$(s="div#rotator .anons a[page_id="+(page_id*1+1)+"]").addClass("show");
 
 	// Прячем текущую картинку
 	current.animate({opacity: 0.0}, 2000)
@@ -92,7 +110,7 @@ function show_next_prev(is_next, is_btn, page_needed) {
 
 function rotate() {
 	if(is_rotate)
-		show_next_prev(true, false, -1);
+		show_next_prev(true, false, -999);
 };
 
 $(document).ready(function() {
@@ -113,10 +131,12 @@ $(document).ready(function() {
 
 <script>
 				var page_url = new Array();
+                <?
+                foreach($pics as $k=>$pic)
+                	echo "page_url[$k]='$pic';";
 
-			 	page_url[0]='http://telegraf.com.ua/tag/professiya-vrach/';
-			 	page_url[1]='http://medioll.ru/media/art/ss/54/NuBOOM_M2_equipment.jpg';
-			 	page_url[2]='about/';
+                ?>
+
 
 
 
@@ -130,20 +150,24 @@ $(document).ready(function() {
 
 				  <div id="rotator" >
                           <div style='height: <?=$height?>px'>
-			                  <a id='aPrevButton' href='javascript: show_next_prev(false, true, -1); '  >
+			                  <a id='aPrevButton' href='javascript: show_next_prev(false, true, -999); '  >
 							  </a>
 
 							  <ul style='width: <?=$width?>px' onclick='javascript: goheadpic()' >
 
-							   	     						<li class='show'  page_id=0 style='
+							    <?
+
+
+                		foreach($pics as $k=>$pic)      {
+		                	?><li class='<?=$k==0?"show":""?>'  page_id=<?=$k?> style='
 													height:<?=$height?>px; overflow: hidden'>
-												<img title='' src='imgs/slider02.jpg' width=<?=$width?> /> </li>
-									 				  	     <li class=''  page_id=1 style='; margin-left: 0px;
-													height:<?=$height?>px; overflow: hidden'>
-												<img title='' src='imgs/slider03.jpg' width=<?=$width?> /> </li>
-									 				  	     <li class=''  page_id=2 style='; margin-left: 0px;
-													height:<?=$height?>px; overflow: hidden'>
-												<img title='' src='imgs/slider04.jpg' width=<?=$width?> /> </li>
+												<img title='' src='<?=$pic?>' width=<?=$width?> /> </li>
+								<?
+		                	}
+
+                ?>
+
+
 
 
 
@@ -158,16 +182,25 @@ $(document).ready(function() {
 
 
 
-							    <a id='aNextButton' href='javascript: show_next_prev(true, true, -1);  '></a>
+							    <a id='aNextButton' href='javascript: show_next_prev(true, true, -999);  '></a>
 
                           </div>
                           <div class=clear style='height: 100px;'></div>
 
 
                           <div class='anons' >
-	                           <a page_id=0 class='sel' href='javascript: show_next_prev(false, true, 0); '><img title='' src='imgs/slider02.jpg'   /></a>
-	                           <a page_id=1 href='javascript: show_next_prev(false, true, 1); '><img title='' src='imgs/slider03.jpg'   /></a>
-	                           <a page_id=2 href='javascript: show_next_prev(false, true, 2); '><img title='' src='imgs/slider04.jpg'   /></a>
+                           <?
+                              $pics[-1]=$pics[count($pics)-1];
+							    $pics[count($pics)-1]=$pics[0];
+							    ksort($pics);
+	                		foreach($pics as $k=>$pic)      {
+		                	?><a page_id=<?=$k?> class='sel' href='javascript: show_next_prev(false, true, <?=$k?>); '>
+		                		<img title='' src='<?=$pic?>'   /></a>
+							<?
+		                	}
+
+               				 ?>
+
                           </div>
 
 				</div>

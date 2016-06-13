@@ -3,6 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta name="description" content="" />
+<link rel="icon" href="favicon.ico" type="image/x-icon">
 <script src="jquery.js" type="text/javascript"></script>
 <title>Lamzac</title>
 
@@ -23,13 +24,13 @@ include "form.tpl.php";
 <div class=menu >
 	<div class=content>
 		<div class=subcontent>
-			<img src='imgs/logo.png'>
+			<img class=logo src='imgs/logo.png'>
 			<ul>
 		  		<li class='sel' anchor=#header><a href='#header'>Главная</a></li>
 		  		<li  anchor=#catalog><a href='#catalog'>Каталог</a></li>
 		  		<li  anchor=#instruction><a href='#instruction'>Инструкция</a></li>
 			</ul>
-			<div style='padding-top: 20px;'>
+			<div style='padding-top: 20px; margin-right: 14px;'>
 				<span class=phone>				8 495 123 45 67</span>
 			</div>
 		</div>
@@ -39,7 +40,10 @@ include "form.tpl.php";
 <div class=content >
 	<div id='header' name=header>
 		<img src='imgs/header.jpg'>
-
+        <div class=img_text 		 style='left: 597px; top: 123px; font-size: 30px;'>НАДУВНОЙ ШЕЗЛОНГ - LAMZAC</div>
+        <div class='img_text yellow' style='left: 642px; top: 167px; font-size: 25px;'>надувается без насоса за 14 секунд</div>
+        <div class=img_text 		 style='left: 302px; top: 359px; font-size: 40px;'>
+        		Получай От Жизни Удовольствие</div>
 	</div>
 
 	<div id='catalog' name=catalog>
@@ -52,8 +56,8 @@ include "form.tpl.php";
 			<li class='<?=rand(1,4)==2?"free_delivery ":""?><?=rand(1,4)==2?"  sale":""?>'>
 				<div class=pictures>
 					<img class=picture src='imgs/catalog1.jpg'>
-					<img class=free_delivery src='imgs/free_delivery.jpg'>
-					<img class=sale src='imgs/sale.jpg'>
+					<img class=free_delivery src='imgs/free_delivery.png'>
+					<img class=sale src='imgs/sale.png'>
 				</div>
 				Lamzac для отдыха ОРАНЖЕВЫЙ<br>
 				<span class='price1'>5 700 руб.</span>
@@ -76,26 +80,31 @@ include "form.tpl.php";
 
 
 </div>
-<div style='background: rgb(240,240,240)'>
+<div style='background: rgb(240,240,240)' class=clear>
     <div class=content>
 
 						<div id='rest'>
 							<h2>Отдыхай с комфортом:</h2>
 							<ul class='subcontent absolute_text'>
 							    <li>
-							    	<img src='imgs/comfort1.jpg'><div style='left: 10px; top: 30px;'><span>на скалистой</span><br>местности</div>
+							    	<img src='imgs/comfort_1.jpg'>
+							    	<!--div style='left: 10px; top: 30px;'><span>на скалистой</span><br>местности</div-->
 							    </li>
 							    <li class='text_right'>
-							    	<img src='imgs/comfort2.jpg'><div style='left: 100px; top: 30px;'><span>на скалистой</span><br>местности</div>
+							    	<img src='imgs/comfort_2.jpg'>
+							    	<!--div style='left: 100px; top: 30px;'><span>на скалистой</span><br>местности</div-->
 							    </li>
 							    <li>
-							    	<img src='imgs/comfort3.jpg'><div style='left: 10px; top: 30px;'><span>на скалистой</span><br>местности</div>
+							    	<img src='imgs/comfort_3.jpg'>
+							    	<!--div style='left: 10px; top: 30px;'><span>на скалистой</span><br>местности</div-->
 							    </li>
 							    <li class='text_right'>
-							    	<img src='imgs/comfort4.jpg'><div style='left: 100px; top: 30px;'><span>на скалистой</span><br>местности</div>
+							    	<img src='imgs/comfort_4.jpg'>
+							    	<!--div style='left: 100px; top: 30px;'><span>на скалистой</span><br>местности</div-->
 							    </li>
 							    <li class='last'>
-							    	<img src='imgs/comfort1.jpg'><div style='left: 100px; top: 50px;'><span>на скалистой</span><br>местности</div>
+							    	<img src='imgs/comfort_5.jpg'>
+							    	<!--div style='left: 100px; top: 50px;'><span>на скалистой</span><br>местности</div-->
 							    </li>
 
 
@@ -115,40 +124,46 @@ include "form.tpl.php";
 	</div>
 
 </div>
-<div style='background: rgb(255,201,30)'>
+<div style='background: rgb(255,201,30)' class=clear>
 	<div class=content>
+		<div class=subcontent>
 
-		<div id='delivery'>
-               <img src='imgs/delivery1.jpg'>
-               <ul>
-		               <li class='li1'> Бесплатная доставка по всей России </li>
-		               <li class='li2'> Гаратия качества Возврат денег в течении 14 дней </li>
-		               <li class='li3'> Оплата при получении Курьеру или в пунктах самовывоза </li>
-               </ul>
-               <img src='imgs/del-right.jpg'>
-               <div class=clear></div>
-		</div>
-
+			<div id='delivery'>
+	               <img src='imgs/delivery1.jpg' class='first'>
+	               <ul>
+			               <li class='li1'> Бесплатная доставка <br>по всей России </li>
+			               <li class='li2'> Гаратия качества<br> Возврат денег в течении 14 дней </li>
+			               <li class='li3'> Оплата при получении<br> Курьеру или в пунктах самовывоза </li>
+	               </ul>
+	               <img src='imgs/del-right.jpg'>
+	               <div class=clear></div>
+			</div>
+        </div>
 	</div>
 </div>
 <div class=content>
 
 	<div id='instruction' name=instruction>
+
 		<h2>Как это работает:</h2>
 
 
 		<ul class='subcontent absolute_text'>
 		    <li>
-		    	<img src='imgs/instruction1.jpg'><div style='left: 10px; top: 30px;'><span>на скалистой</span><br>местности</div>
-		    </li>
-		    <li class='text_right'>
-		    	<img src='imgs/instruction2.jpg'><div style='left: 100px; top: 30px;'><span>на скалистой</span><br>местности</div>
+		    	<img src='imgs/instruction_1.png'>
+		    	<!--div style='left: 10px; top: 30px;'><span>на скалистой</span><br>местности</div-->
 		    </li>
 		    <li>
-		    	<img src='imgs/instruction3.jpg'><div style='left: 10px; top: 30px;'><span>на скалистой</span><br>местности</div>
+		    	<img src='imgs/instruction_2.png'>
+		    	<!--div style='left: 100px; top: 30px;'><span>на скалистой</span><br>местности</div-->
 		    </li>
-		    <li class='text_right'>
-		    	<img src='imgs/instruction4.jpg'><div style='left: 100px; top: 30px;'><span>на скалистой</span><br>местности</div>
+		    <li>
+		    	<img src='imgs/instruction_3.png'>
+		    	<!--div style='left: 10px; top: 30px;'><span>на скалистой</span><br>местности</div-->
+		    </li>
+		    <li>
+		    	<img src='imgs/instruction_4.png'>
+		    	<!--div style='left: 100px; top: 30px;'><span>на скалистой</span><br>местности</div-->
 		    </li>
 
 
@@ -249,7 +264,7 @@ include "form.tpl.php";
 	     $(".menu li").removeClass("sel");
 	     $(".menu li[anchor="+elementClick+"]").addClass("sel");
 
-	     destination = $(elementClick).offset().top -100;
+	     destination = $(elementClick).offset().top -20;
 	     if($.browser.safari){
 	       $('body').animate( { scrollTop: destination }, 1100 );
 	     }else{

@@ -19,14 +19,18 @@ a{	text-decoration: none;}
 }
 
 .menu{
-	position: fixed;
+	position: absolute;
 	width: 100%;
 	height: 70px;
 	background: rgba(255,255,255,0.9);
 	z-index: 999;
+
 }
 
-.menu a{    color: black;}
+.menu a{    color: black;
+}
+
+.menu .logo{	margin-left: 35px;}
 
 .menu .subcontent{	text-align: left;}
 
@@ -37,10 +41,19 @@ a{	text-decoration: none;}
 .menu ul{
 	float: left;}
 
+@font-face {
+    font-family: open_sans; /* Гарнитура шрифта */
+    src: url(fonts/open_sans.ttf); /* Путь к файлу со шрифтом */
+   }
+
 .menu li{
-	font-size: 20px;
+
     margin-left: 50px;
-    font-weight: bold;
+
+
+    font-family: open_sans;
+	font-size: 21px;
+	font-weight: bold;
 
 }
 
@@ -68,6 +81,7 @@ li {
 h2{
 	color: rgb(0,122,195);
 	font-size: 40px;
+	display: block;
 }
 
 div {	text-align: center;}
@@ -77,6 +91,16 @@ ul{
 }
 
 
+
+#header{	position: relative;}
+
+.img_text{	position: absolute;
+	left:100px;
+	top:100px;
+	color:white;
+	font-weight: bold;}
+
+.img_text.yellow{	color: rgb(222,195,60);    font-weight: normal;}
 
 
 #catalog{}
@@ -175,7 +199,9 @@ ul{
 
 
 #rest{     background: rgb(240,240,240);
-	 clear:both;}
+	 clear:both;
+	 padding-top: 1px;
+	 padding-bottom:20px;}
 
 
 ul {	height: auto;}
@@ -218,27 +244,37 @@ ul.absolute_text li div{
 
 
 #instruction {	height: 900px;
+	padding-top:1px;
 }
+
+#instruction img{	width: 542px;
+	height: 542px;}
 
 
 #delivery > img {	float: left;
 
 }
 
+#delivery > img.first {
+	margin-top: 20px;
+	margin-left: 40px;
+
+}
+
 #delivery ul{
 	float: left;
-	width: 600px;
+	width: 455px;
 	display: table;
 }
 
 
 
 #delivery li{
-	padding-left: 70px;
-	padding-top: 10px;    background: url("imgs/del1.jpg") no-repeat left center ;
+	padding-left: 80px;
+	padding-top: 8px;    background: url("imgs/del1.jpg") no-repeat left center ;
     color: white;
     font-size: 20px;
-    min-height: 50px;
+    min-height: 65px;
     width: 100%;
     text-align: left;
 }
@@ -264,8 +300,9 @@ span.red{	color: red;}
 
 .button{
 	padding:20px;
+
 	display: inline-block;
-	margin: 0 auto;
+	margin: 20px auto;
 	clear: both;
 	font-weight: bold;}
 
@@ -337,7 +374,7 @@ span.red{	color: red;}
 
 
 
-                      div#rotator  { position: relative;}
+                      div#rotator  { position: relative; padding-top: 20px;}
      				  div#rotator ul {padding-left: 50px; margin: auto 0; cursor: hand; cursor: pointer; }
 					  div#rotator ul li {float:left; position:absolute; list-style: none; padding: 0; margin-left: 0px }
 
@@ -354,15 +391,19 @@ span.red{	color: red;}
 					   }
 
 					   div#rotator .anons {					   		position: absolute;
-					   		top: 450px;
-						   	left: 185px;
+					   		top: 400px;
+						   	left: 75px;
 					   }
 
 					   div#rotator .anons a{					   		display: block;
 					   		float:left;
 					   		border: solid 3px rgb(30,30,30);
 					   		margin-left: 10px;
-					   }
+                            display: none;					   }
+
+					   div#rotator .anons a.show{
+					   	    display: block;
+					   }
 
 					   div#rotator .anons a.sel{					   		border-color: rgb(255,201,30);					   }
-					   div#rotator .anons img{					   		width:250px;					   }
+					   div#rotator .anons img{					   		width:315px;					   }
