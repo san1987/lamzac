@@ -15,8 +15,9 @@
 
 
 <?
-include "form.tpl.php";
+include "form1.tpl.php";
 ?>
+
 
 
 <div class=menu >
@@ -53,82 +54,82 @@ include "form.tpl.php";
 		?>
 			<li class='<?=rand(1,4)==2?"free_delivery ":""?><?=rand(1,4)==2?"  sale":""?>'>
 				<div class=pictures>
-					
+
 					<img class=picture src='imgs/Lamzac_Pink.jpg'>
 					<img class=free_delivery src='imgs/free_delivery.png'>
 					<img class=sale src='imgs/sale.png'>
-					
+
 				</div>
 				<span class='title'>Lamzac для отдыха РОЗОВЫЙ</span><br>
 				<span class='price1'>5 700 руб.</span>
 				<span class='price2'><b>3 490</b> руб.</span><br>
 				<span class='stock'>В наличии</span>  <br>
-				<a href='javascript: show_req(<?=$i?>)' class='order'>Заказать</a>
+				<div onclick='show_req(this, 0);' class='order'>Заказать</div>
 			</li>
 			<li class='<?=rand(1,4)==2?"free_delivery ":""?><?=rand(1,4)==2?"  sale":""?>'>
 				<div class=pictures>
 					<img class=picture src='imgs/Lamzac_Orange.jpg'>
 					<img class=free_delivery src='imgs/free_delivery.png'>
 					<img class=sale src='imgs/sale.png'>
-					
+
 				</div>
 				<span class='title'>Lamzac для отдыха ОРАНЖЕВЫЙ</span><br>
 				<span class='price1'>5 700 руб.</span>
 				<span class='price2'><b>3 490</b> руб.</span><br>
 				<span class='stock'>В наличии</span>  <br>
-				<a href='javascript: show_req(<?=$i?>)' class='order'>Заказать</a>
+				<div onclick='javascript: show_req(this, 0);' class='order'>Заказать</div>
 			</li>
 			<li class='<?=rand(1,4)==2?"free_delivery ":""?><?=rand(1,4)==2?"  sale":""?>'>
 				<div class=pictures>
 					<img class=picture src='imgs/Lamzac_Red.jpg'>
 					<img class=free_delivery src='imgs/free_delivery.png'>
 					<img class=sale src='imgs/sale.png'>
-				
+
 				</div>
 				<span class='title'>Lamzac для отдыха КРАСНЫЙ</span><br>
 				<span class='price1'>5 700 руб.</span>
 				<span class='price2'><b>3 490</b> руб.</span><br>
 				<span class='stock'>В наличии</span>  <br>
-				<a href='javascript: show_req(<?=$i?>)' class='order'>Заказать</a>
+				<div onclick='javascript: show_req(this, 0);' class='order'>Заказать</div>
 			</li>
 			<li class='<?=rand(1,4)==2?"free_delivery ":""?><?=rand(1,4)==2?"  sale":""?>'>
 				<div class=pictures>
 					<img class=picture src='imgs/Lamzac_Green.jpg'>
 					<img class=free_delivery src='imgs/free_delivery.png'>
 					<img class=sale src='imgs/sale.png'>
-				
+
 				</div>
 				<span class='title'>Lamzac для отдыха ЗЕЛЕНЫЙ</span><br>
 				<span class='price1'>5 700 руб.</span>
 				<span class='price2'><b>3 490</b> руб.</span><br>
 				<span class='stock'>В наличии</span>  <br>
-				<a href='javascript: show_req(<?=$i?>)' class='order'>Заказать</a>
+				<div onclick='javascript: show_req(this, 0);' class='order'>Заказать</div>
 			</li>
 			<li class='<?=rand(1,4)==2?"free_delivery ":""?><?=rand(1,4)==2?"  sale":""?>'>
 				<div class=pictures>
 					<img class=picture src='imgs/Lamzac_Blue.jpg'>
 					<img class=free_delivery src='imgs/free_delivery.png'>
 					<img class=sale src='imgs/sale.png'>
-				
+
 				</div>
 				<span class='title'>Lamzac для отдыха ГОЛУБОЙ</span><br>
 				<span class='price1'>5 700 руб.</span>
 				<span class='price2'><b>3 490</b> руб.</span><br>
 				<span class='stock'>В наличии</span>  <br>
-				<a href='javascript: show_req(<?=$i?>)' class='order'>Заказать</a>
+				<div onclick='javascript: show_req(this, 0);' class='order'>Заказать</div>
 			</li>
 			<li class='<?=rand(1,4)==2?"free_delivery ":""?><?=rand(1,4)==2?"  sale":""?>'>
 				<div class=pictures>
 					<img class=picture src='imgs/Lamzac_Black.jpg'>
 					<img class=free_delivery src='imgs/free_delivery.png'>
 					<img class=sale src='imgs/sale.png'>
-				
+
 				</div>
 				<span class='title'>Lamzac для отдыха ЧЕРНЫЙ</span><br>
 				<span class='price1'>5 700 руб.</span>
 				<span class='price2'><b>3 490</b> руб.</span><br>
 				<span class='stock'>В наличии</span>  <br>
-				<a href='javascript: show_req(<?=$i?>)' class='order'>Заказать</a>
+				<div onclick='javascript: show_req(this, 0);' class='order'>Заказать</div>
 			</li>
 
 		<?
@@ -201,7 +202,7 @@ include "form.tpl.php";
 			               <li class='li3'> Оплата при получении<br> Курьеру или в пунктах самовывоза </li>
 	               </ul>
 	               <img src='imgs/del-right.jpg'>
-	               <div class=clear></div>
+                <div class=clear></div>
 			</div>
         </div>
 	</div>
@@ -278,14 +279,14 @@ include "form.tpl.php";
 		приятный <span class='red upper'>подарок</span> к заказу<br>
 
 		<div class=clear></div>
-		<a href='javascript: show_req(-1)' class='button red upper'>хочу LAMZAC и подарок</a>
+		<a href='javascript: show_req(0, 1)' class='button red upper'>хочу LAMZAC и подарок</a>
 		<div class=clear></div>
 
 		Узнай больше по <span class=phone>8 495 123 45 67</span><br>
 		или оставь свой номер, мы тебе <span class='red upper'>перезвоним</span> сами
 
 		<div class=clear></div>
-		<a href='javascript: show_req(-1)' class='button red_out upper'>перезвоните мне</a>
+		<a href='javascript: show_req(0,2)' class='button red_out upper'>перезвоните мне</a>
         <div class=clear style='height: 20px'></div>
 
 	</div>

@@ -1,4 +1,9 @@
-html, body {	height: 100%; padding: 0px; margin: 0px;font-family: "Verdana"; font-size: 24px;
+html, body {	height: 100%;
+	padding: 0px;
+	margin: 0px;
+	font-family: "Verdana";
+	font-size: 24px;
+	min-width: 1350px;
 
 
 }
@@ -24,6 +29,7 @@ a{	text-decoration: none;}
 	height: 70px;
 	background: rgba(255,255,255,0.47);
 	z-index: 999;
+	min-width: 1350px;
 
 }
 
@@ -180,6 +186,8 @@ h1.img_text{	position: absolute;	left:100px;	top:100px;	color:white;	font-f
 	font-size: 25px;	font-weight: bold;
 	margin: 0 auto;
 	display: block;
+	cursor: hand;
+	cursor: pointer;
 }
 
 
@@ -272,7 +280,7 @@ ul.absolute_text li div{
 	padding-top: 8px;    background: url("imgs/del1.jpg") no-repeat left center ;
     color: white;
     font-size: 20px;
-    min-height: 65px;
+    min-height: 62px;
     width: 100%;
     text-align: left;
 }
@@ -302,10 +310,23 @@ span.red{	color: red;	font-weight: bold;}
 	display: inline-block;
 	margin: 20px auto;
 	clear: both;
-	font-weight: bold;}
+	font-weight: bold;
+	font: normal normal 700 24px/48px Verdana;
+	cursor: hand;
+	cursor: pointer;
+	border: none;
+	text-transform: uppercase;}
 
 .button.red{	background: red;
 	color: white;}
+
+.button.malina{
+	background: #C10034;
+	color: white;
+}
+
+
+
 
 .button.red_out{
 	border: solid 3px red;
@@ -336,28 +357,57 @@ span.red{	color: red;	font-weight: bold;}
 	#send_req_id{
 		font-size: 15px;
 		font-weight: none;
-   	     display: none; width: 100%;
-   	     height:100%; z-index:998;margin: 0 0;
-   	      position: fixed;
-		 background: rgba(0,0,0,0.5)
+   	    display: none; width: 100%;
+   	    height:100%; z-index:998;margin: 0 0;
+   	    position: fixed;
+		background: rgba(0,0,0,0.5);
+
    }
+
+   #send_req_id h2{   		font-size: 25px;
+   		margin-top: 1px;
+   		margin-bottom: 10px;   }
 
    #send_req_id1{
    		 width: 100%; z-index:999;margin: 100px auto; position: fixed;
    }
 
    #send_req  {
-   		 width: 600px; border: solid 1px gray; background: rgb(247, 247, 247);  padding: 10px
+   		 width: 425px;
+   		 border: solid 1px gray;
+   		 background: rgb(247, 247, 247);
+   		 padding: 20px;
+   		 margin: 0 auto;
+   		 color: rgb( 53, 52, 52 );
+
+
    }
 
-    #send_req input[type=text],  #send_req textarea{    	width: 400px;    }
+   #send_req .subtitle{   	  font-size: 16px;
+   	  padding-top: -20px;
+   	  color: gray;   }
+
+   #send_req .button{
+
+	margin-bottom: 0px;
+	margin-top: 20px;
+	width: 425px;;
+	}
+
+    #send_req input ,  #send_req textarea{    	width: 420px;;
+    	min-height:25px;
+    	margin-top: 10px;    }
+
+     #send_req textarea{     	height: 100px;     }
 
    #send_req input[type=submit]{
-   		 padding: 10px; text-transform: uppercase; background-color: rgb(61,122,190); color: white;
 
 
    }
 
+   #form_req {
+    text-align:left;
+	}
 
 
 

@@ -388,6 +388,7 @@ function send_mime_mail(
                         global $admin_email;
                         if ($email_from===false) $email_from=  $admin_email;
   $data_charset = 'CP1251';
+  $data_charset = 'UTF-8';
   //$send_charset = 'KOI8-R';
   $send_charset = 'UTF-8';
 

@@ -123,7 +123,7 @@ $(document).ready(function() {
 
     function go(url){    		 window.location.href=url;    }
 
-	function goheadpic(){
+	function goheadpic(){		if(0)
 	  		 if (allow)
 	   	   	   go(		   	   page_url[page_id]	   	   );
 	}

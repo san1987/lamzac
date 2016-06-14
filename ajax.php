@@ -1,6 +1,7 @@
 <?php
 
 $admin_email="x7door@ya.ru";
+$admin_email="zhalex@ya.ru";
 
 
 $result=array();
@@ -9,7 +10,7 @@ switch($a){
 		$result["result"]="0";
 		if(isset($_SESSION['captcha_keystring']) && $_SESSION['captcha_keystring'] === $_POST['captcha']  || true){
 
-			if (  $phone=="" || $email=="" || $name=="" || $juridical_name=="" )
+			if (  $phone==""    )
 				$result["error"]="Не все обязательные поля формы заполнены. Попробуйте ещё раз";
 			else{
 
@@ -20,17 +21,20 @@ switch($a){
 
 				 $k=send_mime_mail(
                         $admin_email, // email получателя
-                        "LAMZAC: Новый запрос " , // тема письма
+                        "LAMZAC: Новый запрос ".($good_type==0?" на товар ":$good_type==1?"На подарок":"На перезвонить") , // тема письма
                          // текст письма
 
-                         "
-                         ".mres($phone)."
-                         ".mres($email)."
-                         ".mres($name)."
-                         ".						mres($juridical_name)."
-                         ".$main["title"]."
-                         ". $_SERVER['HTTP_REFERER']."
-                         ".mres($text)." "
+                         "телефон ". ($phone).
+                         ($good_type==2?"":"
+                         почта ". ($email)."
+                         имя ". ($name)."
+                         товар $good_id
+
+                         ".						 ($comment1)."
+
+
+                         ". ($text))." "
+
                         ,$email_from=false
                         );
 
