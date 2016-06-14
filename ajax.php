@@ -1,6 +1,6 @@
 <?php
 
-$admin_email="zhalex@ya.ru";
+$admin_email="x7door@ya.ru";
 
 
 $result=array();

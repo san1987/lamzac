@@ -2,12 +2,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<script src="jquery.js" type="text/javascript"></script>
+<title>Купить Lamzac Hangout - надувной шезлонг (Диван) Ламзак: Доставка по Москве и России</title>
 <meta name="description" content="" />
 <link rel="icon" href="favicon.ico" type="image/x-icon">
-<script src="jquery.js" type="text/javascript"></script>
-<title>Lamzac</title>
-
-
 
 <link rel="stylesheet" href="style.css"/>
 
@@ -40,9 +38,9 @@ include "form.tpl.php";
 <div class=content >
 	<div id='header' name=header>
 		<img src='imgs/header.jpg'>
-        <div class=img_text 		 style='left: 597px; top: 123px; font-size: 30px;'>НАДУВНОЙ ШЕЗЛОНГ - LAMZAC</div>
-        <div class='img_text yellow' style='left: 642px; top: 167px; font-size: 25px;'>надувается без насоса за 14 секунд</div>
-        <div class=img_text 		 style='left: 302px; top: 359px; font-size: 40px;'>
+        <h1 class="img_text" style='left: 597px; top: 110px; font-size: 35px;' >НАДУВНОЙ ШЕЗЛОНГ - LAMZAC</h1></div>
+        <div class='img_text yellow' style='left: 642px; top: 167px; font-size: 23px;'>надувается без насоса за 14 секунд</div>
+        <div class="img_text" 		 style='left: 302px; top: 359px; font-size: 43px;'>
         		Получай От Жизни Удовольствие</div>
 	</div>
 
@@ -51,15 +49,82 @@ include "form.tpl.php";
 		<ul class=subcontent>
 
 		<?
-		for ($i=1;$i<=6; $i++){
+		{
 		?>
 			<li class='<?=rand(1,4)==2?"free_delivery ":""?><?=rand(1,4)==2?"  sale":""?>'>
 				<div class=pictures>
-					<img class=picture src='imgs/catalog1.jpg'>
+					
+					<img class=picture src='imgs/Lamzac_Pink.jpg'>
 					<img class=free_delivery src='imgs/free_delivery.png'>
 					<img class=sale src='imgs/sale.png'>
+					
 				</div>
-				Lamzac для отдыха ОРАНЖЕВЫЙ<br>
+				<span class='title'>Lamzac для отдыха РОЗОВЫЙ</span><br>
+				<span class='price1'>5 700 руб.</span>
+				<span class='price2'><b>3 490</b> руб.</span><br>
+				<span class='stock'>В наличии</span>  <br>
+				<a href='javascript: show_req(<?=$i?>)' class='order'>Заказать</a>
+			</li>
+			<li class='<?=rand(1,4)==2?"free_delivery ":""?><?=rand(1,4)==2?"  sale":""?>'>
+				<div class=pictures>
+					<img class=picture src='imgs/Lamzac_Orange.jpg'>
+					<img class=free_delivery src='imgs/free_delivery.png'>
+					<img class=sale src='imgs/sale.png'>
+					
+				</div>
+				<span class='title'>Lamzac для отдыха ОРАНЖЕВЫЙ</span><br>
+				<span class='price1'>5 700 руб.</span>
+				<span class='price2'><b>3 490</b> руб.</span><br>
+				<span class='stock'>В наличии</span>  <br>
+				<a href='javascript: show_req(<?=$i?>)' class='order'>Заказать</a>
+			</li>
+			<li class='<?=rand(1,4)==2?"free_delivery ":""?><?=rand(1,4)==2?"  sale":""?>'>
+				<div class=pictures>
+					<img class=picture src='imgs/Lamzac_Red.jpg'>
+					<img class=free_delivery src='imgs/free_delivery.png'>
+					<img class=sale src='imgs/sale.png'>
+				
+				</div>
+				<span class='title'>Lamzac для отдыха КРАСНЫЙ</span><br>
+				<span class='price1'>5 700 руб.</span>
+				<span class='price2'><b>3 490</b> руб.</span><br>
+				<span class='stock'>В наличии</span>  <br>
+				<a href='javascript: show_req(<?=$i?>)' class='order'>Заказать</a>
+			</li>
+			<li class='<?=rand(1,4)==2?"free_delivery ":""?><?=rand(1,4)==2?"  sale":""?>'>
+				<div class=pictures>
+					<img class=picture src='imgs/Lamzac_Green.jpg'>
+					<img class=free_delivery src='imgs/free_delivery.png'>
+					<img class=sale src='imgs/sale.png'>
+				
+				</div>
+				<span class='title'>Lamzac для отдыха ЗЕЛЕНЫЙ</span><br>
+				<span class='price1'>5 700 руб.</span>
+				<span class='price2'><b>3 490</b> руб.</span><br>
+				<span class='stock'>В наличии</span>  <br>
+				<a href='javascript: show_req(<?=$i?>)' class='order'>Заказать</a>
+			</li>
+			<li class='<?=rand(1,4)==2?"free_delivery ":""?><?=rand(1,4)==2?"  sale":""?>'>
+				<div class=pictures>
+					<img class=picture src='imgs/Lamzac_Blue.jpg'>
+					<img class=free_delivery src='imgs/free_delivery.png'>
+					<img class=sale src='imgs/sale.png'>
+				
+				</div>
+				<span class='title'>Lamzac для отдыха ГОЛУБОЙ</span><br>
+				<span class='price1'>5 700 руб.</span>
+				<span class='price2'><b>3 490</b> руб.</span><br>
+				<span class='stock'>В наличии</span>  <br>
+				<a href='javascript: show_req(<?=$i?>)' class='order'>Заказать</a>
+			</li>
+			<li class='<?=rand(1,4)==2?"free_delivery ":""?><?=rand(1,4)==2?"  sale":""?>'>
+				<div class=pictures>
+					<img class=picture src='imgs/Lamzac_Black.jpg'>
+					<img class=free_delivery src='imgs/free_delivery.png'>
+					<img class=sale src='imgs/sale.png'>
+				
+				</div>
+				<span class='title'>Lamzac для отдыха ЧЕРНЫЙ</span><br>
 				<span class='price1'>5 700 руб.</span>
 				<span class='price2'><b>3 490</b> руб.</span><br>
 				<span class='stock'>В наличии</span>  <br>
@@ -118,9 +183,9 @@ include "form.tpl.php";
 
 
 	<div id='about'>
-		<h2>Lamzac - ЭТО:</h2>
+		<h2 style='margin-bottom: 10px;'>Lamzac - ЭТО:</h2>
 
-		<img src='imgs/about.jpg'>
+		<img src='imgs/about.jpg' style='margin-bottom: 10px;'>
 	</div>
 
 </div>
