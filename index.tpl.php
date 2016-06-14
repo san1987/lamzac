@@ -330,7 +330,7 @@ include "form1.tpl.php";
 	     $(".menu li").removeClass("sel");
 	     $(".menu li[anchor="+elementClick+"]").addClass("sel");
 
-	     destination = $(elementClick).offset().top -20;
+	     destination = $(elementClick).offset().top ;
 	     if($.browser.safari){
 	       $('body').animate( { scrollTop: destination }, 1100 );
 	     }else{

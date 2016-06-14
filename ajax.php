@@ -1,7 +1,7 @@
 <?php
 
 $admin_email="x7door@ya.ru";
-$admin_email="zhalex@ya.ru";
+
 
 
 $result=array();

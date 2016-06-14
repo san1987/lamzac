@@ -11,18 +11,16 @@ jQuery(function($){
 });
 
 </script>
-<div id='send_req_id'
-	   >
+<div id='send_req_id'  >
 
 
-	<div id='send_req_id1'
-		  >
+	<div id='send_req_id1'>
 
 	<form class='login-form' id='send_req' action="javascript:void(null);" onsubmit="call()"    method=POST>
 	<h2 class='param param0 param1'>Заказать LAMZAC</h2>
 	<h2 class='param   param2'>Заполни форму</h2>
 
-	<span class='subtitle param param0'>Lamzac для отдыха ОРАНЖЕВЫЙ<br></span>
+	<span class='subtitle param param0 subtitle_good_title'>Lamzac для отдыха ОРАНЖЕВЫЙ<br></span>
 	<span class='subtitle param param2'>Мы скоро перезвоним тебе</span>  <br><br>
 
 	<div id=form_req>
@@ -49,6 +47,11 @@ jQuery(function($){
 	</div>
 	<div id=result_area>
 	</div>
+
+
+	<a class=close href='javascript: close_send_req_id()'>
+	<img src='imgs/close.png' width=20>
+	</a>
 
 	</form>
 
@@ -121,6 +124,7 @@ function show_req(obj, t){
 
 
 		$('#req_good_id').val(  $(obj).parent().children(".title").html() );
+		$('.subtitle_good_title').html(  $(obj).parent().children(".title").html() );
 
 
 
@@ -132,5 +136,32 @@ function show_req(obj, t){
 		$('#send_req_id .param2').show();
 	}
 	$('#send_req_id').show();
+	alignCenter();
 }
+
+
+// функция принимает элемент, который необходимо центрировать
+function alignCenter( ) {
+	var elem=$('#send_req_id1');
+  elem.css({ // назначение координат left и top
+    left: ($(window).width() - elem.width()) / 2 + 'px',
+    top: ($(window).height() - elem.height()) / 2 + 'px'
+  })
+}
+
+
+$(function() {
+
+  //setInterval( alignCenter, 100); // центрировали окно
+  $(window).resize(function() {
+    alignCenter( ); // центрирование при ресайзе окна
+  })
+
+})
+
+
+
+
 </script>
+
+
