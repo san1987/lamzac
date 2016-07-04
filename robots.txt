@@ -1,0 +1,32 @@
+User-agent: *
+Disallow: /inwidget/
+Disallow: /index.php?*
+Allow: *.jpg
+Allow: *.png
+
+User-Agent: Googlebot
+Allow: *.ttf
+Allow: *.otf
+Allow: *.css
+Allow: *.woff
+Allow: *.png
+Allow: *.gif
+Allow: *.js
+Allow: *.jpg
+Disallow: /inwidget/
+Disallow: /index.php
+
+
+User-Agent: Yandex
+Allow: *.ttf
+Allow: *.otf
+Allow: *.css
+Allow: *.woff
+Allow: *.png
+Allow: *.gif
+Allow: *.js
+Allow: *.jpg
+Disallow: /inwidget/
+Disallow: /index.php
+
+Host: www.airlamzac.ru

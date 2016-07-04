@@ -104,6 +104,8 @@ jQuery(function($){
 
             	}
           },
+		  
+		
           error:  function(xhr, str){
 	    		//alert('Возникла ошибка: ' + xhr.responseCode);
 	    		$('#form_req').hide();

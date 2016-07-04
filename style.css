@@ -106,7 +106,7 @@ ul{
 h1.img_text{	position: absolute;	left:100px;	top:100px;	color:white;	font-family: open_sans;	font-weight: bold;}
 .img_text.yellow{	color: rgb(222,195,60);	font-family: open_sans;	font-weight: bold;}
 
-
+.img_text.yellow-1{	color: #549f9b;	font-family: open_sans;	font-weight: bold;}
 #catalog{}
 
 .subcontent   {
@@ -201,7 +201,7 @@ h1.img_text{	position: absolute;	left:100px;	top:100px;	color:white;	font-f
 	font-size: 25px;	font-weight: bold;
 }
 
-#catalog .title{    padding: 10px;	line-height: 2.5;}
+#catalog .title{    padding: 10px;	line-height: 1.7;}
 
 
 #rest{     background: rgb(240,240,240);
@@ -250,8 +250,13 @@ ul.absolute_text li div{
 
 
 #instruction {	height: 900px;
-	padding-top:1px;
-}
+	padding-top:1px;}
+
+
+#video {
+	margin: 0 auto;
+}
+
 
 #instruction img{	width: 542px;
 	height: 542px;}
@@ -269,14 +274,14 @@ ul.absolute_text li div{
 
 #delivery ul{
 	float: left;
-	width: 455px;
+	width: 485px;
 	display: table;
 }
 
 
 
 #delivery li{
-	padding-left: 80px;
+	padding-left: 77px;
 	padding-top: 8px;    background: url("imgs/del1.jpg") no-repeat left center ;
     color: white;
     font-size: 20px;

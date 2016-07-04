@@ -1,6 +1,6 @@
 <?php
 
-$admin_email="x7door@ya.ru";
+$admin_email="tikhonofftosha@yandex.ru";
 
 
 
